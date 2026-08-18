@@ -1,0 +1,25 @@
+{
+  "name": "reachinbox-email-job-scheduler",
+  "version": "1.0.0",
+  "description": "Production-grade email scheduler service and modern dashboard with Express, TypeScript, BullMQ, Redis, Prisma, Ethereal SMTP, and Next.js 15.",
+  "private": true,
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
+  "scripts": {
+    "install:all": "npm install && npm install --workspace=backend && npm install --workspace=frontend",
+    "dev:backend": "npm run dev --workspace=backend",
+    "dev:frontend": "npm run dev --workspace=frontend",
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "build": "npm run build --workspace=backend && npm run build --workspace=frontend",
+    "test:scheduler": "npm run test:scheduler --workspace=backend",
+    "test:schedule": "npm run test:scheduler --workspace=backend",
+    "test": "npm run test:scheduler --workspace=backend"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "author": "ReachInbox Candidate",
+  "license": "MIT"
+}

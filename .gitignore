@@ -1,0 +1,17 @@
+node_modules/
+dist/
+.next/
+out/
+build/
+*.log
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.sqlite
+*.sqlite-journal
+postgres_data/
+redis_data/
+.DS_Store
+*.tsbuildinfo
